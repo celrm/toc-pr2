@@ -25,8 +25,8 @@ component debouncer
   );
 END component;
 component conv_7seg
-    Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
-           display : out  STD_LOGIC_VECTOR (6 downto 0));
+    Port ( x : in STD_LOGIC_VECTOR (3 downto 0);
+           display : out STD_LOGIC_VECTOR (6 downto 0));
 end component;
 
 signal clave: std_logic_vector (7 downto 0);
@@ -55,15 +55,16 @@ p_estados:
     END IF;
   END PROCESS p_estados;
 
+p_transiciones:
 PROCESS (estado,ok,entrada)
 BEGIN
-estado_sig <= estado;
+estado_sig <= estado; --en caso de que no cambie nada, el estado se mantiene
 
 case estado is
 when inicial =>
     if (ok = '1') then
         estado_sig <= tres;
-        
+   
         led <= (others => '0');
         clave <= entrada;
         intentos <= "0011";
@@ -100,6 +101,6 @@ when uno =>
     end if;
 when final => 
 end case;
-END PROCESS;
+END PROCESS p_transiciones;
 
 END cerrojoArch;

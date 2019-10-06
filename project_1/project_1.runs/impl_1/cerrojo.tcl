@@ -65,9 +65,8 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 1
   open_checkpoint cerrojo_routed.dcp
-  set_property webtalk.parent_dir C:/hlocal/p2/project_1/project_1.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/maria/toc2/project_1/project_1.cache/wt [current_project]
   catch { write_mem_info -force cerrojo.mmi }
   write_bitstream -force cerrojo.bit 
   catch {write_debug_probes -quiet -force cerrojo}

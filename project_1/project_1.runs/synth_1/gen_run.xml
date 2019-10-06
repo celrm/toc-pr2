@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1570122259">
-  <File Type="PA-TCL" Name="cerrojo.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="cerrojo_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="cerrojo_reports.tcl"/>
-  <File Type="RDS-RDS" Name="cerrojo.vds"/>
-  <File Type="RDS-UTIL" Name="cerrojo_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="cerrojo_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="cerrojo.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1570382487">
   <File Type="VDS-TIMINGSUMMARY" Name="cerrojo_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="cerrojo.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="cerrojo_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="cerrojo_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="cerrojo_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="cerrojo.vds"/>
+  <File Type="REPORTS-TCL" Name="cerrojo_reports.tcl"/>
   <File Type="VDS-TIMING-PB" Name="cerrojo_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="cerrojo.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/pe2/conv_7seg.vhd">
